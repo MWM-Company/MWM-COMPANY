@@ -13,10 +13,10 @@
         <div class="menu-icon" onclick="toggleMenu()">☰</div>
     </header>
     <nav id="mobile-menu">
-        <a href="#">Home</a>
-        <a href="#">About Us</a>
-        <a href="#">Collections</a>
-        <a href="#">Contact</a>
+        <a href="HAHAHA.html">Home</a>
+        <a href="HAHAHA.html">About Us</a>
+        <a href="HAHAHA.html">Collections</a>
+        <a href="HAHAHA.html">Contact</a>
     </nav>
     <div class="bubbles">
         <a href="HAHAHA.html" class="bubble">Home</a>
@@ -31,7 +31,7 @@
             <p>You have won a beautiful dress from our latest collection! We are thrilled to have you as a winner of our special giveaway.</p>
             <p>Please click <a href="HAHAHA.html">here</a> to claim your prize.</p>
             <p>Thank you</p>
-            <img src="prank1.jpg" alt="Winning Dress" id="winning-dress">
+            <img src="prank1.jpg" alt="Winning Dress" id="winning-dress">`
         </section>
         <div class="additional-content">
             <p>Enjoy your prize and stay tuned for more exciting giveaways!</p>
@@ -65,10 +65,10 @@
 
         function toggleMenu() {
             var menu = document.getElementById('mobile-menu');
-            if (menu.style.display === 'block') {
-                menu.style.display = 'none';
+            if (menu.classList.contains('open')) {
+                menu.classList.remove('open');
             } else {
-                menu.style.display = 'block';
+                menu.classList.add('open');
             }
         }
     </script>
