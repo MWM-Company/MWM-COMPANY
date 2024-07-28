@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MWM Co. - Winner Announcement</title>
+    <link rel="stylesheet" href="prank.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body onload="startCelebration()">
+    <header>
+        <h1>MWM Co.</h1>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </header>
+    <nav id="mobile-menu">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Collections</a>
+        <a href="#">Contact</a>
+    </nav>
+    <div class="bubbles">
+        <a href="HAHAHA.html" class="bubble">Home</a>
+        <a href="HAHAHA.html" class="bubble">About Us</a>
+        <a href="HAHAHA.html" class="bubble">Collections</a>
+        <a href="HAHAHA.html" class="bubble">Contact</a>
+    </div>
+    <main>
+        <section class="winner-announcement">
+            <h2>Congratulations!</h2>
+            <p>Dear <span id="winner-name">deena.haddadi2006</span>,</p>
+            <p>You have won a beautiful dress from our latest collection! We are thrilled to have you as a winner of our special giveaway.</p>
+            <p>Please click <a href="HAHAHA.html">here</a> to claim your prize.</p>
+            <p>Thank you</p>
+            <img src="prank1.jpg" alt="Winning Dress" id="winning-dress">
+        </section>
+        <div class="additional-content">
+            <p>Enjoy your prize and stay tuned for more exciting giveaways!</p>
+        </div>
+    </main>
+
+    <script>
+        function startCelebration() {
+            var duration = 15 * 1000;
+            var end = Date.now() + duration;
+
+            (function frame() {
+                confetti({
+                    particleCount: 5,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 }
+                });
+                confetti({
+                    particleCount: 5,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 }
+                });
+
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            }());
+        }
+
+        function toggleMenu() {
+            var menu = document.getElementById('mobile-menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
